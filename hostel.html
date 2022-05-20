@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOSTEL FORM</title>
+</head>
+
+<body>
+
+  <div class="container vh-100">
+
+
+    <div class="row justify-content-center h-90">
+      <div class="card w-50 my-auto shadow">
+
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            <div class="card-header text-center bg-primary text-white">
+
+              <h1>HOSTEL FORM</h1>
+            </div>
+          </div>
+          <div class="panel-body">
+            <form action="hostel_details1.php" method="post">
+              <div class="form-group"></div>
+              <p>Required fields are followed by *</p>
+              <h4>Contact Information</h4>
+              <label for="name">Full Name *:</label>
+              <input type="text" name="name" id="name" required>
+              <br>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="gender">Gender *:</label>
+
+            <div>
+              <fieldset>
+                <label for="female" class="radio-inline">
+                  <input type="radio" name="gender" id="female" value="F" required> Female</label>
+                <label for="male" class="radio-inline">
+                  <input type="radio" name="gender" id="male" value="M" required> Male</label>
+                <label for="other" class="radio-inline">
+                  <input type="radio" name="gender" id="other" value="O" required> Other</label>
+              </fieldset>
+            </div>
+
+
+            <div>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <label for="address">Address *:</label>
+              <textarea name="address" id="address" cols="100" rows="6" required class="form-control"></textarea>
+              <br>
+            </div>
+            <div class="form-group">
+              <label for="email">Email :*</label>
+              <input type="email" name="email" id="email" required class="form-control" /><br>
+            </div>
+            <div class="form-group">
+              <label for="pincode">Pincode *:</label>
+              <input type="number" name="pincode" id="pincode" required class="form-control" /><br>
+            </div>
+            <div class="form-group">
+              <label for="phoneno">Phone Number *: </label>
+              <input type="text" name="phoneno" id="phoneno" required class="form-control" />
+              <br>
+            </div>
+            <h4>Educational Information</h4>
+            <div class="form-group">
+              <label for="college">College Name: </label>
+              <input type="text" name="college" id="college" class="form-control">
+              <br>
+            </div>
+            <p>>Year of Study:
+              <select name="yearofstudy" id="yearofstudy">
+                <option value="">---- select year of study ----</option>
+                <option value="fy">First year</option>
+                <option value="sy">Second year</option>
+                <option value="ty">Third year</option>
+                <option value="ffy">Final year</option>
+              </select>
+            </p>
+            <p></p>
+            <input type="submit" name="save" value="Submit">
+
+            </form>
+          </div>
+          <div class="panel-footer text-right">
+            <small>&copy; Cummins College</small>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

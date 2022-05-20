@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container vh-100">
+
+
+    <div class="row justify-content-center h-90">
+      <div class="card w-50 my-auto shadow">
+
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            <div class="card-header text-center bg-primary text-white">
+              <h2>REGISTRATION FORM</h2>
+            </div>
+            <!--  <h2>REGISTRATION FORM</h2>-->
+          </div>
+          <div class="panel-body">
+            <form action="registerr.php" method="post">
+
+              <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" placeholder="First name" class="form-control" name="firstname" required/><br>
+              </div>
+
+              <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" class="form-control" placeholder="Last Name" name="lastname" required /><br>
+              </div>
+
+
+              <div class="form-group">
+                <!--     <label for="gender">GENDER</label>-->
+                <!--<input type="text" id="firstname" class="form-control" /> -->
+                <div>
+                  <!--  <label for="male" class="radio-inline"><input type="radio" name="Gender" id="male">Male</label>
+                  <label for="female" class="radio-inline"><input type="radio" name="Gender" id="female">Female</label>
+                  <label for="other" class="radio-inline"><input type="radio" name="Gender" id="others">Others</label><br>-->
+
+                </div>
+                <div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" class="form-control" placeholder="Email" name="email" required /><br>
+                </div>
+
+
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" class="form-control" minlength="8" placeholder="Password" name="password" required/><br>
+                </div>
+
+
+<form onsubmit="return verifyPassword()">
+  <div class="form-group">
+  <!--  <label for="confirmpassword">Confirm Password</label>
+    <input type="password" id="confirmpassword" class="form-control" name="confirmpassword" />-->
+    Confirm Password <br><input type="password" value="" placeholder="Confirm Password" minlength="8" id="typepass1" name="confirmpassword" required>
+  <span id="message" style="color:red"></span>
+
+    <input type="checkbox" onclick="Toggle()">
+    Show Password
+
+    <script>
+      // Change the type of input to password or text
+      function Toggle() {
+        var temp = document.getElementById("typepass1");
+        if (temp.type === "password") {
+          temp.type = "text";
+        } else {
+          temp.type = "password";
+        }
+      }
+    </script>
+  </div>
+
+</form>
+
+
+<br>
+                <div class="form-group">
+                  <label for="mobileNO">MoblieNO</label>
+                  <input type="text" id="mobileNO" class="form-control" name="mobileNO" maxlength="10" placeholder="Phone Number" minlength="10" maxlength="10" required pattern="[1-9]{1}[0-9]{9}" required/><br>
+
+                </div>
+
+                <input type="submit" class="btn btn-primary w-100" name="save" value="REGISTER" />
+                <!--  <input type="SUBMIT" class="btn btn-primary w-100" value="Login" name="" />-->
+                <p>Already have an account?<a href="index.html"> LOGIN</a></p>
+            </form>
+          </div>
+          <div class="panel-footer text-right">
+            <small>&copy; Cummins College</small>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
